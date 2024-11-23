@@ -41,10 +41,21 @@ async def start_command(client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "sᴜᴘᴘᴏʀᴛ",
-url=f"https://t.me/mastiwithfriendsxd")
+                        "sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/mastiwithfriendsxd")
                 ]
+            ],
+            [
+                [    
+                    InlineKeyboardButton(
+                        "ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")
+                ],
+                [
+                    InlineKeyboardButton(
+                        "sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/mastiwithfriendsxd")
+                ]
+            ]     
       )
+      
 )
 
 @app.on_message(
