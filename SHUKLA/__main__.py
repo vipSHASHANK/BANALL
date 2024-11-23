@@ -37,10 +37,19 @@ async def start_command(client, message: Message):
         ),
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")],
-                [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/mastiwithfriendsxd")],
-                [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url="https://t.me/strangerassociation")],
-                [InlineKeyboardButton("sʜɪᴠᴀɴsʜ-xᴅ", url="https://t.me/shivansh474")],
+              [
+                  InlineKeyboardButton(text="▪️sᴇssɪᴏɴ ɢᴇɴ ʙᴏᴛ▪️", url="https://t.me/StringSesssionGeneratorRobot"),
+              ],
+              [
+                  InlineKeyboardButton(text="▪️ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ▪️", url="https://t.me/StrangerAssociation/539"),
+              ],
+              [
+                  InlineKeyboardButton("▪️sᴜᴘᴘᴏʀᴛ▪️", url="https://t.me/MASTIWITHFRIENDSXD"),
+                  InlineKeyboardButton("▪️ᴜᴘᴅᴀᴛᴇ▪️", url="https://t.me/StrangerAssociation"),
+              ],
+              [
+                  InlineKeyboardButton("▪️sʜɪᴠàɴsʜ-xᴅ▪️", url="https://t.me/ITSZ_SHIVANSH"),
+              ],
             ]
         ),
     )
