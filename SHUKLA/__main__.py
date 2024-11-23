@@ -31,7 +31,7 @@ filters.command("start")
 )
 async def start_command(client, message: Message):
   await message.reply_photo(
-                            photo = f"https://graph.org/file/e2ea01d5ee83d104615c1.jpg",
+                            photo = f"https://files.catbox.moe/tndcfj.jpg",
                             caption = f"ʜᴇʏ ɪᴍ ʙᴀɴ ᴀʟʟ ʙᴏᴛ ᴠᴇʀʏ ᴘᴏᴡᴇʀ ғᴜʟʟ\n\nᴀɴʏ ɢʀᴘ ᴄᴀɴ ʙʟᴏᴡ ᴜᴘ ɪɴ ᴊᴜsᴛ ᴀ ғᴇᴠ sᴇᴄᴏɴᴅs\n\nᴀᴅᴅ ᴍᴇ ᴀɴʏ ɢʀᴘ ᴀɴᴅ ɢɪᴠᴇ ʙᴀɴ ᴘᴏᴡᴇʀ\n\nᴛʏᴘᴇ /banall ᴛᴏ sᴇᴇ ᴍᴀɢɪᴄ ɪɴ ɢʀᴘ\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ :- [sᴛʀᴀɴɢᴇʀ](https://t.me/SHIVANSH474)",
   reply_markup=InlineKeyboardMarkup(
             [
