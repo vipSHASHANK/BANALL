@@ -41,7 +41,7 @@ async def start_command(client, message: Message):
                   InlineKeyboardButton(text="▪️sᴇssɪᴏɴ ɢᴇɴ ʙᴏᴛ▪️", url="https://t.me/StringSesssionGeneratorRobot"),
               ],
               [
-                  InlineKeyboardButton(text="▪️ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ▪️", url="https://t.me/StrangerAssociation/539"),
+                  InlineKeyboardButton(text="▪️ғʀᴇᴇ ɪᴅ ᴜsᴇʀ-ʙᴏᴛ▪️", url="https://t.me/Shukla_op_clone1bot"),
               ],
               [
                   InlineKeyboardButton("▪️sᴜᴘᴘᴏʀᴛ▪️", url="https://t.me/MASTIWITHFRIENDSXD"),
