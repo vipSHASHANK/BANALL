@@ -54,8 +54,7 @@ async def start_command(client, message: Message):
                         "sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/mastiwithfriendsxd")
                 ]
             ]     
-      )
-      
+      )   
 )
 
 @app.on_message(
