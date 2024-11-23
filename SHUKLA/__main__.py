@@ -31,7 +31,7 @@ filters.command("start")
 )
 async def start_command(client, message: Message):
   await message.reply_photo(
-        photo="https://files.catbox.moe/tndcfj.jpg",
+        photo="https://files.catbox.moe/jbc3mk.jpg",
         caption=(
             "**╭────── ˹ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ˼ ──────⏤͟͟͞͞★**\n"
             "**┆● ʜᴇʏ ɪ ᴀᴍ ʙᴀɴ-ᴀʟʟ ʙᴏᴛ**\n"
@@ -41,7 +41,7 @@ async def start_command(client, message: Message):
             "**❖ ɪ ᴀᴍ ᴀ ᴠᴇʀʀʏ ᴘᴏᴡᴇʀ ғᴜʟʟ ʙᴀɴᴀʟʟ ʙᴏᴛ**\n"
             "**ᴀɴʏ ɢʀᴘ ᴄᴀɴ ʙʟᴏᴡ ᴜᴘ ɪɴ ᴊᴜsᴛ ᴀ ғᴇᴡ sᴇᴄᴏɴᴅs**\n"
             "**ᴀᴅᴅ ᴍᴇ ᴀɴʏ ɢʀᴏᴜᴘ ᴀɴᴅ ɢɪᴠᴇ ʙᴀɴ ᴘᴏᴡᴇʀ**\n"
-            "**──────────────────────────**"
+            "**──────────────────────────**\n"
             "**❖ ᴜꜱᴇ » /banall ᴛᴏ sᴇᴇ ᴍᴀɢɪᴄ ɪɴ ɢʀᴏᴜᴘ**\n"
             "**──────────────────────────**"
         ),
