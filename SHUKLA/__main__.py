@@ -37,8 +37,9 @@ async def start_command(client, message: Message):
         ),
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")],
-                [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/mastiwithfriendsxd")],
+                [InlineKeyboardButton("ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")],                [InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/mastiwithfriendsxd")],
+                [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/strangerassociation")],
+               [InlineKeyboardButton("sʜɪᴠᴀɴsʜ-xᴅ", url="https://t.me/shivansh474")],
             ]
         ),
     )
