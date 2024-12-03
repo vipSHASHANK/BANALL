@@ -23,11 +23,11 @@ OWNER = os.getenv("OWNER")
 LOGGER_ID = int(os.getenv("LOGGER_ID"))
 
 photo = [
-    "https://telegra.ph/file/1949480f01355b4e87d26.jpg",
-    "https://telegra.ph/file/3ef2cc0ad2bc548bafb30.jpg",
-    "https://telegra.ph/file/a7d663cd2de689b811729.jpg",
-    "https://telegra.ph/file/6f19dc23847f5b005e922.jpg",
-    "https://telegra.ph/file/2973150dd62fd27a3a6ba.jpg",
+    "https://files.catbox.moe/uxg0mv.jpg",
+    "https://files.catbox.moe/3a2x4j.jpg",
+    "https://files.catbox.moe/2nu9g8.jpg",
+    "https://files.catbox.moe/v5j80u.jpg",
+    "https://files.catbox.moe/5c5gxc.jpg",
 ]
 
 # pyrogram client
