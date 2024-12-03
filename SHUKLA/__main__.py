@@ -68,7 +68,7 @@ async def start_command(client, message: Message):
             ]
         ),
     )
-    await app.send_message(
+await app.send_message(
                 LOGGER_ID,
                 f"{mention} Has Just Started The Bot"
             )
