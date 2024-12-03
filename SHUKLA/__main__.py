@@ -2,6 +2,9 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import RPCError
+from typing import Union
+import asyncio
 
 # Logging configuration
 logging.basicConfig(
@@ -100,7 +103,7 @@ async def join_watcher(client: Client, message: Message):
                 )
                 await client.send_photo(
                     LOGGER_ID, 
-                    photo=random.choice(photo), 
+                    photo=photo, 
                     caption=msg, 
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("sᴇᴇ ɢʀᴏᴜᴘ👀", url=link)]
@@ -128,7 +131,7 @@ async def on_left_chat_member(client: Client, message: Message):
             )
             await client.send_photo(
                 LOGGER_ID, 
-                photo=random.choice(photo), 
+                photo=photo, 
                 caption=left_msg
             )
     except RPCError as e:
