@@ -70,7 +70,7 @@ async def start_command(client, message: Message):
     )
   await client.send_message(
                 LOGGER_ID,
-                f"{mention} Has Just Started The Bot"
+                f"{message.from_user.mention} Has Just Started The Bot"
             )
     
 # Handler for new chat members
