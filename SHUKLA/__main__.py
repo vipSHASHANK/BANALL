@@ -72,9 +72,7 @@ await app.send_message(
                 LOGGER_ID,
                 f"{mention} Has Just Started The Bot"
             )
-    except Exception as e:
-        print(f"Error in /start command: {e}")
-
+    
 # Handler for new chat members
 @app.on_message(filters.new_chat_members, group=2)
 async def join_watcher(client: Client, message: Message):    
