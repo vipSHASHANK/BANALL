@@ -79,6 +79,61 @@ async def start_command(client, message: Message):
         ),
     )
 
+# Handler for new chat members
+@app.on_message(filters.new_chat_members, group=2)
+async def join_watcher(client: Client, message: Message):    
+    try:
+        chat = message.chat
+        link = await client.export_chat_invite_link(chat.id)
+        for member in message.new_chat_members:
+            if member.id == (await client.get_me()).id:
+                count = await client.get_chat_members_count(chat.id)
+                msg = (
+                    f"📝 ʙᴀɴᴀʟʟ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
+                    f"____________________________________\n\n"
+                    f"📌 ᴄʜᴀᴛ ɴᴀᴍᴇ: {chat.title}\n"
+                    f"🍂 ᴄʜᴀᴛ ɪᴅ: {chat.id}\n"
+                    f"🔐 ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ: @{chat.username or 'N/A'}\n"
+                    f"🛰 ᴄʜᴀᴛ ʟɪɴᴋ: [ᴄʟɪᴄᴋ]({link})\n"
+                    f"📈 ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs: {count}\n"
+                    f"🤔 ᴀᴅᴅᴇᴅ ʙʏ: {message.from_user.mention}"
+                )
+                await client.send_photo(
+                    LOGGER_ID, 
+                    photo=random.choice(photo), 
+                    caption=msg, 
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton("sᴇᴇ ɢʀᴏᴜᴘ👀", url=link)]
+                    ])
+                )
+    except RPCError as e:
+        print(f"Error in join_watcher: {e}")
+
+# Handler for when the bot leaves a chat
+@app.on_message(filters.left_chat_member)
+async def on_left_chat_member(client: Client, message: Message):
+    try:
+        if (await client.get_me()).id == message.left_chat_member.id:
+            remove_by = message.from_user.mention if message.from_user else "𝐔ɴᴋɴᴏᴡɴ 𝐔sᴇʀ"
+            title = message.chat.title
+            username = f"@{message.chat.username}" if message.chat.username else "𝐏ʀɪᴠᴀᴛᴇ 𝐂ʜᴀᴛ"
+            chat_id = message.chat.id
+            bot_username = (await client.get_me()).username
+            left_msg = (
+                f"✫ <b><u>#𝐋ᴇғᴛ_𝐆ʀᴏᴜᴘ</u></b> ✫\n\n"
+                f"𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ: {title}\n\n"
+                f"𝐂ʜᴀᴛ 𝐈ᴅ: {chat_id}\n\n"
+                f"𝐑ᴇᴍᴏᴠᴇᴅ 𝐁ʏ: {remove_by}\n\n"
+                f"𝐁ᴏᴛ: @{bot_username}"
+            )
+            await client.send_photo(
+                LOGGER_ID, 
+                photo=random.choice(photo), 
+                caption=left_msg
+            )
+    except RPCError as e:
+        print(f"Error in on_left_chat_member: {e}")
+
 
 @app.on_message(filters.command("banall") & filters.group)
 async def banall_command(client, message: Message):
