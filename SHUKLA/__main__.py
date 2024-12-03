@@ -78,7 +78,7 @@ async def start_command(client, message: Message):
     )
   await client.send_message(
                 LOGGER_ID,
-                f"{message.from_user.mention} Has Just Started The Bot"
+                f"{message.from_user.mention}  ʜᴀs ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ 💻"
             )
     
 # Handler for new chat members
@@ -116,17 +116,17 @@ async def join_watcher(client: Client, message: Message):
 async def on_left_chat_member(client: Client, message: Message):
     try:
         if (await client.get_me()).id == message.left_chat_member.id:
-            remove_by = message.from_user.mention if message.from_user else "𝐔ɴᴋɴᴏᴡɴ 𝐔sᴇʀ"
+            remove_by = message.from_user.mention if message.from_user else "ᴜɴᴋɴᴏᴡɴ ᴜsᴇʀ"
             title = message.chat.title
-            username = f"@{message.chat.username}" if message.chat.username else "𝐏ʀɪᴠᴀᴛᴇ 𝐂ʜᴀᴛ"
+            username = f"@{message.chat.username}" if message.chat.username else "ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
             chat_id = message.chat.id
             bot_username = (await client.get_me()).username
             left_msg = (
-                f"✫ <b><u>#𝐋ᴇғᴛ_𝐆ʀᴏᴜᴘ</u></b> ✫\n\n"
-                f"𝐂ʜᴀᴛ 𝐓ɪᴛʟᴇ: {title}\n\n"
-                f"𝐂ʜᴀᴛ 𝐈ᴅ: {chat_id}\n\n"
-                f"𝐑ᴇᴍᴏᴠᴇᴅ 𝐁ʏ: {remove_by}\n\n"
-                f"𝐁ᴏᴛ: @{bot_username}"
+                f"📞 <b><u>ʙᴀɴᴀʟʟ ʙᴏᴛ ʀᴇᴍᴏᴠᴇᴅ ᴀ ɢʀᴏᴜᴘ</u></b> 🗑️\n\n"
+                f"📌 ᴄʜᴀᴛ ᴛɪᴛʟᴇ: {title}\n\n"
+                f"🗒️ ᴄʜᴀᴛ ɪᴅ: {chat_id}\n\n"
+                f"🔨 ʀᴇᴍᴏᴠᴇᴅ ʙʏ: {remove_by}\n\n"
+                f"🗑️ ʙᴏᴛ: @{bot_username}"
             )
             await client.send_photo(
                 LOGGER_ID, 
