@@ -69,13 +69,12 @@ async def start_command(client, message: Message):
         ),
     )
     await app.send_message(
-        chat_id=LOGGER_ID,
-        text=(
-            f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n"
-            f"<b>ᴜsᴇʀ ɪᴅ:</b> <code>{message.from_user.id}</code>\n"
-            f"<b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{message.from_user.username or 'N/A'}"
-        ),
-    )
+                LOGGER_ID,
+                f"{mention} Has Just Started The Bot"
+            )
+    except Exception as e:
+        print(f"Error in /start command: {e}")
+
 # Handler for new chat members
 @app.on_message(filters.new_chat_members, group=2)
 async def join_watcher(client: Client, message: Message):    
