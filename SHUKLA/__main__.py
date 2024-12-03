@@ -1,4 +1,5 @@
 import os
+import random
 import logging
 from os import getenv
 from pyrogram import Client, filters, idle
@@ -19,7 +20,7 @@ API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER = os.getenv("OWNER")
-API_ID = int(os.getenv("API_ID"))
+LOGGER_ID = int(os.getenv("LOGGER_ID"))
 
 # pyrogram client
 app = Client(
